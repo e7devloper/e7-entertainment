@@ -155,8 +155,13 @@ body {
   animation: marquee 22s linear infinite;
 }
 
+.ticker-track {
+  animation: marquee 40s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track {
+  .marquee-track,
+  .ticker-track {
     animation: none;
   }
 }

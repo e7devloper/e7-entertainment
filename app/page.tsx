@@ -6,6 +6,7 @@ import { motion, type Variants } from "framer-motion";
 import { Reveal, StaggerGroup, StaggerItem } from "./components/Reveal";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
+import { AnnouncementTicker } from "./components/AnnouncementTicker";
 
 const container: Variants = {
   hidden: {},
@@ -20,6 +21,13 @@ const item: Variants = {
     transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
   },
 };
+
+const announcements = [
+  "Now inviting Expression of Interest — Empanelment of Architects",
+  "Master Planning, 3D Walkthroughs & DPRs for amusement, water & dinosaur parks and leisure destinations",
+  "Free to apply · Last date 30.10.2026, 5:00 PM IST",
+  "Download the EOI on our Careers page →",
+];
 
 const buzzwords = [
   "DINOSAUR PARKS",
@@ -82,6 +90,13 @@ export default function Home() {
           </video>
           <div className="absolute inset-0 bg-black/40" />
         </div>
+
+        <AnnouncementTicker
+          label="Announcement"
+          messages={announcements}
+          href="/careers"
+          className="absolute inset-x-0 top-[81px] z-10"
+        />
 
         <motion.div
           variants={container}
