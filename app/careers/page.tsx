@@ -18,7 +18,7 @@ const eoi = {
   schedule: [
     ["Last date for queries", "22.10.2026, 5:00 PM IST"],
     ["Online pre-submission meeting", "24.10.2026, 12:00 PM IST"],
-    ["Last date for submission", "31.10.2026, 5:00 PM IST"],
+    ["Last date for submission", "30.10.2026, 5:00 PM IST"],
     ["Application fee", "NIL — free to apply"],
   ],
 };
@@ -69,9 +69,9 @@ export default function Careers() {
             <p className="mt-6 border-l-2 border-gold bg-white px-4 py-3 text-sm leading-relaxed text-ink-soft">
               <span className="font-semibold text-ink">Dates revised (12.10.2026):</span>{" "}
               the pre-submission meeting is now on 24.10.2026 and the last
-              date for submission is extended to 31.10.2026. Shortlisting and
-              online interaction will be held from 02.11.2026 to 07.11.2026,
-              and Empanelment Letters issued by 15.11.2026. The EOI document
+              date for submission is extended to 30.10.2026. Shortlisting and
+              online interaction will be held from 02.11.2026 to 06.11.2026,
+              and Empanelment Letters issued by 16.11.2026. The EOI document
               below has been updated.
             </p>
 
