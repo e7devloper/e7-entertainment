@@ -14,11 +14,11 @@ const eoi = {
   pdf: "/careers/E7_EOI_Empanelment_of_Architects_2026.pdf",
   forms: "/careers/E7_EOI_Application_Forms_Architects_2026.docx",
   email: "support@e7entertainments.com",
-  meet: "https://meet.google.com/rgc-gxdn-xca",
+  meet: "https://meet.google.com/uuu-dhfh-cwt",
   schedule: [
-    ["Last date for queries", "09.10.2026, 5:00 PM IST"],
-    ["Online pre-submission meeting", "10.10.2026, 11:00 AM IST"],
-    ["Last date for submission", "14.10.2026, 5:00 PM IST"],
+    ["Last date for queries", "22.10.2026, 5:00 PM IST"],
+    ["Online pre-submission meeting", "24.10.2026, 12:00 PM IST"],
+    ["Last date for submission", "31.10.2026, 5:00 PM IST"],
     ["Application fee", "NIL — free to apply"],
   ],
 };
@@ -66,6 +66,15 @@ export default function Careers() {
               destinations across India. Free to apply.
             </p>
 
+            <p className="mt-6 border-l-2 border-gold bg-white px-4 py-3 text-sm leading-relaxed text-ink-soft">
+              <span className="font-semibold text-ink">Dates revised (12.10.2026):</span>{" "}
+              the pre-submission meeting is now on 24.10.2026 and the last
+              date for submission is extended to 31.10.2026. Shortlisting and
+              online interaction will be held from 02.11.2026 to 07.11.2026,
+              and Empanelment Letters issued by 15.11.2026. The EOI document
+              below has been updated.
+            </p>
+
             <dl className="mt-8 grid gap-x-8 gap-y-4 text-sm sm:grid-cols-2">
               {eoi.schedule.map(([label, value]) => (
                 <div key={label} className="border-l-2 border-gold pl-4">
@@ -79,7 +88,7 @@ export default function Careers() {
               <span className="font-semibold text-ink">
                 Online pre-submission meeting (Google Meet):
               </span>{" "}
-              Saturday, 10.10.2026, 11:00 AM IST —{" "}
+              Saturday, 24.10.2026, 12:00 PM IST —{" "}
               <a
                 href={eoi.meet}
                 target="_blank"
@@ -139,7 +148,7 @@ export default function Careers() {
               </ol>
               <p className="mt-6">
                 Queries: email us with the subject &ldquo;Query – EOI for
-                Empanelment of Architects&rdquo; by 09.10.2026, 5:00 PM IST, or
+                Empanelment of Architects&rdquo; by 22.10.2026, 5:00 PM IST, or
                 WhatsApp +91-90421 87810.
               </p>
             </div>
