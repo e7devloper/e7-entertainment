@@ -25,8 +25,9 @@ const item: Variants = {
 const announcements = [
   "Now inviting Expression of Interest — Empanelment of Architects",
   "Master Planning, 3D Walkthroughs & DPRs for amusement, water & dinosaur parks and leisure destinations",
-  "Free to apply · Last date 30.10.2026, 5:00 PM IST",
-  "Download the EOI on our Careers page →",
+  "Free to apply · Last date 22.10.2026, 5:00 PM IST (Corrigendum No. 01)",
+  "Online pre-submission meeting 19.10.2026, 12:00 PM IST",
+  "Download the EoI and Corrigendum on our Careers page →",
 ];
 
 const buzzwords = [

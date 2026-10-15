@@ -17,9 +17,9 @@ const eoi = {
   email: "support@e7entertainments.com",
   meet: "https://meet.google.com/uuu-dhfh-cwt",
   schedule: [
-    ["Last date for queries", "22.10.2026, 5:00 PM IST"],
-    ["Online pre-submission meeting", "24.10.2026, 12:00 PM IST"],
-    ["Last date for submission", "30.10.2026, 5:00 PM IST"],
+    ["Online pre-submission meeting", "19.10.2026, 12:00 PM IST"],
+    ["Last date for queries", "19.10.2026, 5:00 PM IST"],
+    ["Last date for submission", "22.10.2026, 5:00 PM IST"],
     ["Application fee", "NIL — free to apply"],
   ],
 };
@@ -71,11 +71,12 @@ export default function Careers() {
               <span className="font-semibold text-ink">
                 Corrigendum No. 01 (15.10.2026) — dates revised:
               </span>{" "}
-              the pre-submission meeting is now on 24.10.2026 and the last
-              date for submission is extended to 30.10.2026. Shortlisting and
-              online interaction will be held from 02.11.2026 to 06.11.2026,
-              and Empanelment Letters issued by 16.11.2026. The EOI document
-              below has been updated.{" "}
+              the online pre-submission meeting is on 19.10.2026 at 12:00 PM
+              IST, the last date for queries is 19.10.2026, 5:00 PM IST, and
+              the last date for submission is 22.10.2026, 5:00 PM IST.
+              Shortlisting and online interaction will be held on 26.10.2026,
+              and Empanelment Letters issued within 10 days from 26.10.2026.
+              The EoI document below has been updated.{" "}
               <a
                 href={eoi.corrigendum}
                 target="_blank"
@@ -99,7 +100,7 @@ export default function Careers() {
               <span className="font-semibold text-ink">
                 Online pre-submission meeting (Google Meet):
               </span>{" "}
-              Saturday, 24.10.2026, 12:00 PM IST —{" "}
+              Monday, 19.10.2026, 12:00 PM IST —{" "}
               <a
                 href={eoi.meet}
                 target="_blank"
@@ -112,7 +113,7 @@ export default function Careers() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a href={eoi.pdf} download className="btn btn-solid">
-                Download EOI (PDF)
+                Download EoI (PDF)
               </a>
               <a href={eoi.forms} download className="btn btn-solid">
                 Application Forms (Word)
@@ -134,7 +135,7 @@ export default function Careers() {
               <h3 className="text-base font-bold text-ink">How to apply</h3>
               <ol className="mt-4 list-decimal space-y-2 pl-5">
                 <li>
-                  Download the EOI document and the Application Forms (Word),
+                  Download the EoI document and the Application Forms (Word),
                   and fill in Forms 1 to 6.
                 </li>
                 <li>
@@ -162,7 +163,7 @@ export default function Careers() {
               </ol>
               <p className="mt-6">
                 Queries: email us with the subject &ldquo;Query – EOI for
-                Empanelment of Architects&rdquo; by 22.10.2026, 5:00 PM IST, or
+                Empanelment of Architects&rdquo; by 19.10.2026, 5:00 PM IST, or
                 WhatsApp +91-90421 87810.
               </p>
             </div>
