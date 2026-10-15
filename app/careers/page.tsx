@@ -13,6 +13,7 @@ const eoi = {
   notice: "OXF/E7E/EOI/ARCH/2026/001",
   pdf: "/careers/E7_EOI_Empanelment_of_Architects_2026.pdf",
   forms: "/careers/E7_EOI_Application_Forms_Architects_2026.docx",
+  corrigendum: "/careers/E7_EOI_Architects_Corrigendum_01.pdf",
   email: "support@e7entertainments.com",
   meet: "https://meet.google.com/uuu-dhfh-cwt",
   schedule: [
@@ -67,12 +68,22 @@ export default function Careers() {
             </p>
 
             <p className="mt-6 border-l-2 border-gold bg-white px-4 py-3 text-sm leading-relaxed text-ink-soft">
-              <span className="font-semibold text-ink">Dates revised (12.10.2026):</span>{" "}
+              <span className="font-semibold text-ink">
+                Corrigendum No. 01 (15.10.2026) — dates revised:
+              </span>{" "}
               the pre-submission meeting is now on 24.10.2026 and the last
               date for submission is extended to 30.10.2026. Shortlisting and
               online interaction will be held from 02.11.2026 to 06.11.2026,
               and Empanelment Letters issued by 16.11.2026. The EOI document
-              below has been updated.
+              below has been updated.{" "}
+              <a
+                href={eoi.corrigendum}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whitespace-nowrap font-semibold text-gold-ink underline hover:text-ink"
+              >
+                View Corrigendum (PDF)
+              </a>
             </p>
 
             <dl className="mt-8 grid gap-x-8 gap-y-4 text-sm sm:grid-cols-2">
@@ -105,6 +116,9 @@ export default function Careers() {
               </a>
               <a href={eoi.forms} download className="btn btn-solid">
                 Application Forms (Word)
+              </a>
+              <a href={eoi.corrigendum} download className="btn btn-solid">
+                Corrigendum No. 01 (PDF)
               </a>
               <a
                 href={`mailto:${eoi.email}?subject=${encodeURIComponent(
