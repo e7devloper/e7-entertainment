@@ -16,8 +16,7 @@ export default function News() {
 
       <section className="mx-auto w-full max-w-4xl px-6 py-28 pt-44 text-center lg:px-10">
         <Reveal>
-          <p className="eyebrow">News</p>
-          <h1 className="rule-gold mx-auto mt-4 max-w-2xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">
+          <h1 className="rule-gold mx-auto max-w-2xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">
             Updates from E7 Entertainments
           </h1>
           <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">

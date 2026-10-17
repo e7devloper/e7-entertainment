@@ -55,7 +55,7 @@ export default async function ProductCategoryPage({
         <div className="relative mx-auto w-full max-w-7xl px-6 py-16 lg:px-10">
           <Link
             href="/products"
-            className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold transition-colors hover:text-white"
+            className="inline-block rounded bg-ink px-3 py-1.5 font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold transition-colors hover:text-white"
           >
             ← Our Products
           </Link>
@@ -89,11 +89,13 @@ export default async function ProductCategoryPage({
           {/* Main content */}
           <div>
             <Reveal>
-              <p className="eyebrow">{category.tagline}</p>
-              <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+              <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
                 Category overview
               </h2>
-              <p className="mt-8 text-base leading-relaxed text-ink-soft">
+              <p className="mt-4 text-sm font-medium text-muted">
+                {category.tagline}
+              </p>
+              <p className="mt-6 max-w-[65ch] text-base leading-relaxed text-ink-soft">
                 {category.description}
               </p>
             </Reveal>
@@ -112,7 +114,7 @@ export default async function ProductCategoryPage({
                       <p className="mt-2 text-sm text-ink-soft">{sub.description}</p>
                       <Link
                         href={`/products/${category.slug}/${sub.slug}`}
-                        className="mt-4 inline-block font-display text-xs font-semibold uppercase tracking-[0.16em] text-gold hover:underline"
+                        className="mt-4 inline-block font-display text-xs font-semibold uppercase tracking-[0.16em] text-gold-ink hover:underline"
                       >
                         View Products →
                       </Link>

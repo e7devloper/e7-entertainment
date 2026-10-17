@@ -33,7 +33,7 @@ const services = [
     title: "Food & Beverage Setups",
     description:
       "Food courts, kiosks, food trucks and commercial kitchen equipment for parks, malls and cafés. From layout to daily operations, we deliver ready-to-run setups built for high footfall.",
-    image: "/images/food-kiosk.jpg",
+    image: "/images/container-cafe.jpg",
   },
   {
     title: "Movies, Content & OTT, Cinema, Events & Media, Cultural Exchange",
@@ -48,23 +48,21 @@ export default function About() {
     <div className="flex flex-1 flex-col bg-white text-ink">
       <SiteHeader />
 
-      {/* Page banner */}
+      {/* Page banner — navy-duotone treatment, matching the home hero */}
       <section className="relative flex min-h-[45vh] items-end overflow-hidden pt-24">
-        <div className="pointer-events-none absolute inset-0">
+        <div className="pointer-events-none absolute inset-0 isolate bg-ink">
           <Image
             src="/images/hero-ferris-wheel.jpg"
             alt=""
             fill
             priority
-            className="object-cover"
+            sizes="100vw"
+            className="object-cover opacity-90 mix-blend-luminosity"
           />
-          <div className="absolute inset-0 bg-ink/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/15" />
         </div>
         <div className="relative mx-auto w-full max-w-7xl px-6 py-16 lg:px-10">
-          <p className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold">
-            About Us
-          </p>
-          <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl">
+          <h1 className="max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl">
             About E7 Entertainments
           </h1>
         </div>
@@ -74,8 +72,7 @@ export default function About() {
       <section className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
         <Reveal className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="eyebrow">Who We Are</p>
-            <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+            <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
               One group, built for global reach
             </h2>
           </div>
@@ -101,8 +98,7 @@ export default function About() {
       <section className="bg-sand py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <Reveal className="max-w-2xl">
-            <p className="eyebrow">What We Deliver</p>
-            <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+            <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
               Our services
             </h2>
           </Reveal>
@@ -122,8 +118,10 @@ export default function About() {
                         src={service.image}
                         alt={service.title}
                         fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover grayscale transition-[filter,transform] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
                       />
+                      <div className="absolute inset-0 bg-ink/10 transition-opacity duration-700 group-hover:opacity-0" />
                     </div>
                   )}
                   <div className="p-8">
@@ -149,8 +147,10 @@ export default function About() {
                         src={service.image}
                         alt={service.title}
                         fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover grayscale transition-[filter,transform] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
                       />
+                      <div className="absolute inset-0 bg-ink/10 transition-opacity duration-700 group-hover:opacity-0" />
                     </div>
                   )}
                   <div className="p-8">
@@ -171,8 +171,7 @@ export default function About() {
       {/* Support */}
       <section className="mx-auto max-w-4xl px-6 py-28 text-center lg:px-10">
         <Reveal>
-          <p className="eyebrow">Beyond Opening Day</p>
-          <h2 className="mt-6 text-2xl font-bold leading-snug tracking-tight sm:text-3xl">
+          <h2 className="text-2xl font-bold leading-snug tracking-tight sm:text-3xl">
             Every project backed by installation, spare parts, maintenance,
             training and technology support — we stay with you after opening
             day.

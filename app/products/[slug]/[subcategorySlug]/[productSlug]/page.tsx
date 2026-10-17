@@ -58,7 +58,7 @@ export default async function ProductDetailPage({
       <section className="relative flex min-h-[40vh] items-end overflow-hidden pt-24">
         <div className="absolute inset-0 bg-gradient-to-b from-ink/40 to-ink/60" />
         <div className="relative mx-auto w-full max-w-7xl px-6 py-16 lg:px-10">
-          <div className="mb-4 flex items-center gap-2 text-sm">
+          <div className="mb-4 inline-flex items-center gap-2 rounded bg-ink px-3 py-1.5 text-sm">
             <Link
               href={`/products/${category.slug}`}
               className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold transition-colors hover:text-white"
@@ -100,7 +100,7 @@ export default async function ProductDetailPage({
               </p>
               <p className="mt-4 text-sm text-muted">
                 We&apos;re working on adding complete product details and images.
-                <Link href="/contact" className="ml-1 text-gold underline">
+                <Link href="/contact" className="ml-1 text-gold-ink underline">
                   Contact us
                 </Link>
                 {" "}for more information about this product.

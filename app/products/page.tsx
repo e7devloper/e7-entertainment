@@ -16,23 +16,21 @@ export default function Products() {
     <div className="flex flex-1 flex-col bg-white text-ink">
       <SiteHeader />
 
-      {/* Page banner */}
+      {/* Page banner — navy-duotone treatment, matching the home hero */}
       <section className="relative flex min-h-[45vh] items-end overflow-hidden pt-24">
-        <div className="pointer-events-none absolute inset-0">
+        <div className="pointer-events-none absolute inset-0 isolate bg-ink">
           <Image
             src="/images/hero-ferris-wheel.jpg"
             alt=""
             fill
             priority
-            className="object-cover"
+            sizes="100vw"
+            className="object-cover opacity-90 mix-blend-luminosity"
           />
-          <div className="absolute inset-0 bg-ink/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/15" />
         </div>
         <div className="relative mx-auto w-full max-w-7xl px-6 py-16 lg:px-10">
-          <p className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold">
-            Our Products
-          </p>
-          <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl">
+          <h1 className="max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl">
             Five categories, one sourcing partner
           </h1>
         </div>
@@ -42,8 +40,7 @@ export default function Products() {
       <section className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
         <Reveal className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="eyebrow">What We Offer</p>
-            <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+            <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
               Everything under five categories
             </h2>
           </div>
@@ -61,8 +58,7 @@ export default function Products() {
       <section className="bg-sand py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <Reveal className="max-w-2xl">
-            <p className="eyebrow">Browse By Category</p>
-            <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+            <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
               Our product categories
             </h2>
           </Reveal>
@@ -81,7 +77,7 @@ export default function Products() {
                     className="flex h-full flex-col bg-white transition-colors hover:bg-sand"
                   >
                     <div className="flex flex-1 flex-col p-8">
-                      <p className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-gold">
+                      <p className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-gold-ink">
                         {category.tagline}
                       </p>
                       <h3 className="mt-3 font-display text-lg font-semibold tracking-tight text-ink">
@@ -106,7 +102,7 @@ export default function Products() {
                     className="flex h-full flex-col bg-white transition-colors hover:bg-sand"
                   >
                     <div className="flex flex-1 flex-col p-8">
-                      <p className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-gold">
+                      <p className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-gold-ink">
                         {category.tagline}
                       </p>
                       <h3 className="mt-3 font-display text-lg font-semibold tracking-tight text-ink">

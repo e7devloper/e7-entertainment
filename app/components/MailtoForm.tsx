@@ -52,7 +52,7 @@ export function MailtoForm({
               name={field.name}
               required={field.required}
               rows={4}
-              className="mt-2 w-full border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold"
+              className="mt-2 w-full border border-line bg-white px-4 py-3 text-sm text-ink transition-colors focus:border-gold"
             />
           ) : (
             <input
@@ -60,7 +60,7 @@ export function MailtoForm({
               name={field.name}
               type={field.type ?? "text"}
               required={field.required}
-              className="mt-2 w-full border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold"
+              className="mt-2 w-full border border-line bg-white px-4 py-3 text-sm text-ink transition-colors focus:border-gold"
             />
           )}
         </div>

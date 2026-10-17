@@ -1,5 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SocialLinks } from "./SocialLinks";
+
+const quickLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/products", label: "Products" },
+  { href: "/park-request", label: "Request a Park" },
+  { href: "/news", label: "News" },
+  { href: "/careers", label: "Careers" },
+  { href: "/contact", label: "Contact Us" },
+];
 
 const offices = [
   {
@@ -22,8 +33,8 @@ export function SiteFooter() {
   return (
     <footer className="bg-ink text-white">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-        <div className="grid gap-14 lg:grid-cols-[1.1fr_2fr]">
-          {/* Brand + quick links */}
+        <div className="grid gap-14 lg:grid-cols-[1fr_0.7fr_1.6fr]">
+          {/* Brand */}
           <div>
             <div className="flex items-center gap-3">
               <span className="flex h-20 w-20 items-center justify-center rounded-md bg-white p-2.5">
@@ -48,6 +59,25 @@ export function SiteFooter() {
             </div>
           </div>
 
+          {/* Quick links */}
+          <div>
+            <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-gold">
+              Quick Links
+            </p>
+            <ul className="mt-8 space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/70 transition-colors hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Offices */}
           <div>
             <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-gold">
@@ -69,7 +99,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-16 border-t border-white/10 pt-8">
-          <p className="text-xs tracking-wide text-white/45">
+          <p className="text-xs tracking-wide text-white/55">
             &copy; {new Date().getFullYear()} E7 Entertainments Group. All
             rights reserved.
           </p>

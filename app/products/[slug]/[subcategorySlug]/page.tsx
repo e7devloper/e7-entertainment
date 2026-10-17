@@ -72,7 +72,7 @@ export default async function SubcategoryPage({
         <div className="relative mx-auto w-full max-w-7xl px-6 py-16 lg:px-10">
           <Link
             href={`/products/${category.slug}`}
-            className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold transition-colors hover:text-white"
+            className="inline-block rounded bg-ink px-3 py-1.5 font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold transition-colors hover:text-white"
           >
             ← {category.title}
           </Link>
@@ -97,7 +97,7 @@ export default async function SubcategoryPage({
                   href={`/products/${category.slug}/${sub.slug}`}
                   className={`block rounded px-4 py-2 text-sm font-medium transition-colors ${
                     sub.slug === subcategorySlug
-                      ? "bg-sand text-gold"
+                      ? "bg-sand text-gold-ink"
                       : "text-ink hover:bg-sand hover:text-gold"
                   }`}
                 >
@@ -110,10 +110,12 @@ export default async function SubcategoryPage({
           {/* Main content */}
           <div>
             <Reveal>
-              <p className="eyebrow">{subcategory.description}</p>
-              <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+              <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
                 Products
               </h2>
+              <p className="mt-6 max-w-[65ch] text-base leading-relaxed text-ink-soft">
+                {subcategory.description}
+              </p>
             </Reveal>
 
             {products.length > 0 ? (
@@ -148,7 +150,7 @@ export default async function SubcategoryPage({
                           <h3 className="font-display text-base font-semibold text-ink">
                             {product.name}
                           </h3>
-                          <span className="mt-2 inline-block font-display text-xs font-semibold uppercase tracking-[0.16em] text-gold">
+                          <span className="mt-2 inline-block font-display text-xs font-semibold uppercase tracking-[0.16em] text-gold-ink">
                             View Details →
                           </span>
                         </div>

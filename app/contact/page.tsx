@@ -34,8 +34,7 @@ export default function Contact() {
       <section className="mx-auto w-full max-w-7xl px-6 pb-20 pt-44 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="eyebrow">Start Your Project</p>
-            <h1 className="rule-gold mt-4 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">
+            <h1 className="rule-gold text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">
               Tell us about your dream.
             </h1>
           </div>
@@ -84,8 +83,7 @@ export default function Contact() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <p className="eyebrow">Partner With Us</p>
-              <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+              <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
                 Become a Partner
               </h2>
               <p className="mt-6 text-base leading-relaxed text-ink-soft">
@@ -124,8 +122,7 @@ export default function Contact() {
       {/* Offices */}
       <section className="bg-white py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="eyebrow">Our Address</p>
-          <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+          <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
             Where to find us
           </h2>
 

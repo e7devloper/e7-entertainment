@@ -30,44 +30,41 @@ const announcements = [
   "Download the EoI and Corrigendum on our Careers page →",
 ];
 
-const buzzwords = [
-  "DINOSAUR PARKS",
-  "SPORTS",
-  "OUTDOOR",
-  "FOOD & BEVERAGE",
-  "OTT",
-];
-
 const opportunities = [
   {
     title: "Amusement & Dinosaur Parks, Game Zones",
     description:
       "Theme parks, water parks, dino and adventure attractions, arcades and VR zones — turnkey concepts built for the next generation of visitors.",
-    video: "/videos/amusement-ai-3s-clean.mp4",
+    image: "/images/water-park.jpg",
+    alt: "Aerial view of a water park's pools and slides at golden hour",
   },
   {
     title: "Lighting, Festival, Party & Seasonal Products",
     description:
       "Decorative, stage and festival lighting plus seasonal and celebration products — moving at scale across fast-growing markets.",
-    video: "/videos/lighting-ai-3s-clean.mp4",
+    image: "/images/festival-crowd.jpg",
+    alt: "A crowd with hands raised before a lit festival stage at night",
   },
   {
     title: "Sports, Tents & Outdoor",
     description:
       "Playground, fitness, camping and glamping gear, and event tents — built for active, outdoor experiences.",
-    video: "/videos/sports-ai-3s-clean.mp4",
+    image: "/images/camping-tents.jpg",
+    alt: "Tents pitched across a misty outdoor camping field at dawn",
   },
   {
     title: "Food & Beverage Setups",
     description:
       "Food courts, kiosks, food trucks and commercial kitchen equipment for parks, malls and cafés. From layout to daily operations, we deliver ready-to-run setups built for high footfall.",
-    video: "/videos/food-ai-3s-clean.mp4",
+    image: "/images/container-cafe.jpg",
+    alt: "A dockside café and kiosk setup on a waterfront boardwalk",
   },
   {
     title: "Movies, Content & OTT, Cinema, Events & Media, Cultural Exchange",
     description:
       "Cinema and live events, film and content distribution, and cultural exchange programs that turn moments into memories and bridge markets. Connecting screens and stages worldwide.",
-    video: "/videos/cinema-ai-3s-clean.mp4",
+    image: "/images/cultural-dance.jpg",
+    alt: "A traditional dragon dance performance moving through a city street",
   },
 ];
 
@@ -76,20 +73,19 @@ export default function Home() {
     <div className="flex flex-1 flex-col bg-white text-ink">
       <SiteHeader />
 
-      {/* Hero — full-bleed banner image with overlaid title */}
+      {/* Hero — full-bleed photograph, navy-duotone treatment with overlaid title */}
       <section className="relative flex min-h-[85vh] items-center overflow-hidden pt-24">
-        <div className="pointer-events-none absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="/images/hero-ferris-wheel.jpg"
-            className="h-full w-full object-cover"
-          >
-            <source src="/videos/hero-combined.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-black/40" />
+        <div className="pointer-events-none absolute inset-0 isolate bg-ink">
+          <Image
+            src="/images/hero-ferris-wheel.jpg"
+            alt="A ferris wheel silhouetted against a sunset sky"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-90 mix-blend-luminosity"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/40 to-ink/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" />
         </div>
 
         <AnnouncementTicker
@@ -134,8 +130,7 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
         <Reveal className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="eyebrow">Who We Are</p>
-            <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+            <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
               Transforming landscapes, enriching lives
             </h2>
           </div>
@@ -159,8 +154,7 @@ export default function Home() {
       <section className="bg-sand py-28">
         <Reveal className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:px-10">
           <div>
-            <p className="eyebrow">Chairman&apos;s Message</p>
-            <blockquote className="mt-8">
+            <blockquote>
               <p className="font-display text-2xl font-medium leading-snug tracking-tight text-ink sm:text-3xl">
                 &ldquo;Every great destination begins with one person&apos;s
                 dream. For over two decades, I have built international
@@ -190,23 +184,10 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* Marquee */}
-      <div className="overflow-hidden border-y border-line bg-white py-5">
-        <div className="marquee-track flex w-max gap-10 whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.28em] text-muted">
-          {[...buzzwords, ...buzzwords].map((word, i) => (
-            <span key={i} className="flex items-center gap-10">
-              {word}
-              <span className="text-gold">•</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
       {/* Opportunities */}
       <section id="opportunities" className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
         <Reveal className="max-w-2xl">
-          <p className="eyebrow">Where We&apos;re Building</p>
-          <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+          <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
             A portfolio of opportunities, one partnership away
           </h2>
           <p className="mt-8 text-base leading-relaxed text-ink-soft">
@@ -224,17 +205,16 @@ export default function Home() {
                   index === 2 ? "sm:col-span-2 lg:col-span-1" : ""
                 }`}
               >
-                {opportunity.video && (
+                {opportunity.image && (
                   <div className="relative h-52 w-full overflow-hidden">
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    >
-                      <source src={opportunity.video} type="video/mp4" />
-                    </video>
+                    <Image
+                      src={opportunity.image}
+                      alt={opportunity.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover grayscale transition-[filter,transform] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+                    />
+                    <div className="absolute inset-0 bg-ink/10 transition-opacity duration-700 group-hover:opacity-0" />
                   </div>
                 )}
                 <div className="p-8">
@@ -254,17 +234,16 @@ export default function Home() {
                 key={opportunity.title}
                 className="group h-full bg-white transition-colors hover:bg-sand"
               >
-                {opportunity.video && (
+                {opportunity.image && (
                   <div className="relative h-52 w-full overflow-hidden">
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    >
-                      <source src={opportunity.video} type="video/mp4" />
-                    </video>
+                    <Image
+                      src={opportunity.image}
+                      alt={opportunity.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover grayscale transition-[filter,transform] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+                    />
+                    <div className="absolute inset-0 bg-ink/10 transition-opacity duration-700 group-hover:opacity-0" />
                   </div>
                 )}
                 <div className="p-8">

@@ -39,6 +39,9 @@ export function ProductsDropdown() {
       className="group relative shrink-0"
       onMouseEnter={openNow}
       onMouseLeave={closeSoon}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") setIsOpen(false);
+      }}
     >
       <button
         // A real click is preceded by a mouseenter (which already opens the
@@ -47,6 +50,8 @@ export function ProductsDropdown() {
         // (needed for touch devices, which don't fire hover at all) and lets
         // onMouseLeave / clicking a link handle closing.
         onClick={openNow}
+        aria-expanded={isOpen}
+        aria-haspopup="true"
         className="flex items-center gap-1 whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold xl:tracking-[0.16em] leading-none mt-1"
       >
         Our Products
@@ -63,7 +68,12 @@ export function ProductsDropdown() {
             : "invisible opacity-0 -translate-y-2 pointer-events-none"
         }`}
       >
-        <div className="w-max max-w-[92vw] bg-white shadow-lg border border-line rounded-sm">
+        <div
+          className="w-max max-w-[92vw] bg-white shadow-lg border border-line rounded-sm"
+          onBlur={(e) => {
+            if (!e.currentTarget.contains(e.relatedTarget)) closeSoon();
+          }}
+        >
           {/* Row of categories — wraps onto extra rows on narrower viewports instead of overlapping */}
           <div className="flex flex-wrap gap-x-8 gap-y-6 p-6 xl:p-8">
             {productCategories.map((category) => {

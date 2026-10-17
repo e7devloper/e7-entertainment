@@ -31,8 +31,7 @@ export default function Careers() {
 
       <section className="mx-auto w-full max-w-4xl px-6 py-28 pt-44 text-center lg:px-10">
         <Reveal>
-          <p className="eyebrow">Careers</p>
-          <h1 className="rule-gold mx-auto mt-4 max-w-2xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">
+          <h1 className="rule-gold mx-auto max-w-2xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">
             Build the future of entertainment with us
           </h1>
           <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
@@ -51,15 +50,14 @@ export default function Careers() {
       {/* Open opportunities */}
       <section className="mx-auto w-full max-w-4xl px-6 pb-28 lg:px-10">
         <Reveal>
-          <p className="eyebrow">Open Opportunities</p>
-          <div className="mt-6 border-t-2 border-gold bg-sand p-8 sm:p-10">
+          <div className="border-t-2 border-gold bg-sand p-8 sm:p-10">
             <p className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
               Notice No. {eoi.notice}
             </p>
             <h2 className="mt-3 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
               Expression of Interest — Empanelment of Architects
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-ink-soft">
+            <p className="mt-4 max-w-[65ch] text-base leading-relaxed text-ink-soft">
               We invite COA-registered architects and architectural firms to
               apply for empanelment to prepare Master Plans (DMP), 3D video
               walkthroughs and Detailed Project Reports (DPR) for amusement,
@@ -67,7 +65,7 @@ export default function Careers() {
               destinations across India. Free to apply.
             </p>
 
-            <p className="mt-6 border-l-2 border-gold bg-white px-4 py-3 text-sm leading-relaxed text-ink-soft">
+            <p className="mt-6 max-w-[65ch] border-l-2 border-gold bg-white px-4 py-3 text-sm leading-relaxed text-ink-soft">
               <span className="font-semibold text-ink">
                 Corrigendum No. 01 (15.10.2026) — dates revised:
               </span>{" "}
@@ -96,7 +94,7 @@ export default function Careers() {
               ))}
             </dl>
 
-            <p className="mt-8 text-sm leading-relaxed text-ink-soft">
+            <p className="mt-8 max-w-[65ch] text-sm leading-relaxed text-ink-soft">
               <span className="font-semibold text-ink">
                 Online pre-submission meeting (Google Meet):
               </span>{" "}
@@ -131,7 +129,7 @@ export default function Careers() {
               </a>
             </div>
 
-            <div className="mt-10 border-t border-line pt-8 text-sm leading-relaxed text-ink-soft">
+            <div className="mt-10 max-w-[65ch] border-t border-line pt-8 text-sm leading-relaxed text-ink-soft">
               <h3 className="text-base font-bold text-ink">How to apply</h3>
               <ol className="mt-4 list-decimal space-y-2 pl-5">
                 <li>

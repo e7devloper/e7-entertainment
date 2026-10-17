@@ -7,20 +7,24 @@
   /* Navy scale — our "black" everywhere; never pure #000 */
   --ink: #1f3864;
   --ink-soft: #3d4c5e;
-  --muted: #64748b;
+  --muted: #5e6d85;
 
   /* Neutral grounds */
   --sand: #f4f7fb;
   --sand-deep: #e8eef7;
   --line: #e1e8f0;
 
-  /* Rich gold accent */
+  /* Rich gold accent — bright, for fills and text over dark backgrounds */
   --gold: #f0a821;
   --gold-hover: #ffc14d;
-  --gold-ink: #f0a821;
+  /* Deepened for text on light backgrounds: #f0a821 is 2:1 on white, fails WCAG AA */
+  --gold-ink: #7a5206;
 
   /* Tiny-accent only — dots, hover details, never large fills */
   --coral: #ff6b6b;
+
+  /* Form error text on white/sand. --coral is 2.6–2.8:1 there, well under WCAG AA. */
+  --error: #b42318;
 }
 
 @theme inline {
@@ -36,6 +40,7 @@
   --color-gold-hover: var(--gold-hover);
   --color-gold-ink: var(--gold-ink);
   --color-coral: var(--coral);
+  --color-error: var(--error);
   --font-sans: var(--font-open-sans);
   --font-display: var(--font-montserrat);
 }
@@ -49,6 +54,11 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 
 /* Miral pairs Montserrat headings with Open Sans body copy. */
@@ -68,16 +78,6 @@ body {
   html {
     scroll-behavior: auto;
   }
-}
-
-/* Small caps eyebrow label above section headings */
-.eyebrow {
-  font-family: var(--font-display), sans-serif;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gold);
 }
 
 /* Square, uppercase CTA — Miral keeps corners sharp throughout */
@@ -151,17 +151,19 @@ body {
   }
 }
 
-.marquee-track {
-  animation: marquee 22s linear infinite;
-}
-
 .ticker-track {
   animation: marquee 40s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track,
   .ticker-track {
     animation: none;
+  }
+
+  /* Without the scroll animation, a static viewport would clip every
+     message past the first — let reduced-motion users scroll it manually. */
+  .ticker-viewport {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
