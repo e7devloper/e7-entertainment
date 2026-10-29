@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Reveal, StaggerGroup, StaggerItem } from "../../components/Reveal";
+import { Reveal } from "../../components/Reveal";
 import { SiteHeader } from "../../components/SiteHeader";
 import { SiteFooter } from "../../components/SiteFooter";
 import { getProductsForSubcategory, getSubcategoriesForCategory } from "../../products/data";
-import { getOpportunity, opportunities, type ProjectStatus } from "../data";
+import { getOpportunity, opportunities } from "../data";
 
 const steps = [
   {
@@ -25,14 +25,6 @@ const steps = [
     text: "We commission, train your team, and stay on for spare parts and maintenance.",
   },
 ];
-
-const statusStyle: Record<ProjectStatus, string> = {
-  Completed: "bg-ink text-white",
-  "Under construction": "bg-gold text-ink",
-  Installing: "bg-gold text-ink",
-  Ongoing: "bg-gold text-ink",
-  "In design": "border border-line bg-white text-ink-soft",
-};
 
 export function generateStaticParams() {
   return opportunities.map((o) => ({ slug: o.slug }));
@@ -122,41 +114,8 @@ export default async function OpportunityPage({ params }: { params: Promise<{ sl
         </Reveal>
       </section>
 
-      {/* Current work */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-24 lg:px-10">
-        <Reveal className="max-w-2xl">
-          <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-            Our current work
-          </h2>
-          <p className="mt-8 text-base leading-relaxed text-ink-soft">
-            A selection of projects in Tamil Nadu. Client names are withheld at their request.
-          </p>
-        </Reveal>
-
-        <StaggerGroup
-          className={`mt-14 grid gap-6 ${opportunity.projects.length > 2 ? "lg:grid-cols-3" : "md:grid-cols-2"}`}
-        >
-          {opportunity.projects.map((project) => (
-            <StaggerItem key={project.name} className="flex h-full flex-col border-t-2 border-gold bg-sand p-8">
-              <span
-                className={`self-start px-2.5 py-1 font-display text-[0.6875rem] font-semibold uppercase tracking-[0.12em] ${statusStyle[project.status]}`}
-              >
-                {project.status}
-              </span>
-              <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-ink">{project.name}</h3>
-              <p className="mt-1 text-sm text-muted">
-                {project.location} · {project.client}
-              </p>
-              <p className="mt-5 text-sm font-semibold leading-relaxed text-ink">{project.scope}</p>
-              <p className="mt-3 text-sm leading-relaxed text-ink-soft">{project.summary}</p>
-              <p className="mt-auto pt-6 text-sm text-muted">{project.timeline}</p>
-            </StaggerItem>
-          ))}
-        </StaggerGroup>
-      </section>
-
       {/* Product range — this replaced the old /products category pages */}
-      <section id="products" className="scroll-mt-28 border-t border-line py-24">
+      <section id="products" className="scroll-mt-28 py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="max-w-2xl">
             <h2 className="rule-gold text-3xl font-bold leading-tight tracking-tight sm:text-4xl">

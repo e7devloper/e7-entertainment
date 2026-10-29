@@ -1,18 +1,3 @@
-// PLACEHOLDER CONTENT: the projects below are illustrative and were written to fill the layout.
-// Replace them with real E7 projects (or remove them) before this goes live.
-
-export type ProjectStatus = "Completed" | "Under construction" | "In design" | "Ongoing" | "Installing";
-
-export type Project = {
-  name: string;
-  location: string;
-  client: string;
-  status: ProjectStatus;
-  timeline: string;
-  scope: string;
-  summary: string;
-};
-
 export type Opportunity = {
   slug: string;
   title: string;
@@ -24,7 +9,6 @@ export type Opportunity = {
   productCategory: string;
   intro: string[];
   delivers: string[];
-  projects: Project[];
 };
 
 export const opportunities: Opportunity[] = [
@@ -48,37 +32,6 @@ export const opportunities: Opportunity[] = [
       "Safety testing, commissioning and operator training",
       "Spare parts and maintenance support after opening",
     ],
-    projects: [
-      {
-        name: "Family water park",
-        location: "Madurai district",
-        client: "Private developer",
-        status: "Under construction",
-        timeline: "Opening planned for 2027",
-        scope: "6 acres · wave pool, 4 slide towers, children's splash zone",
-        summary:
-          "A day-trip water park on the outskirts of the city. E7 prepared the master plan and is supplying and installing all slides and water play equipment.",
-      },
-      {
-        name: "Dinosaur trail and edutainment zone",
-        location: "Salem",
-        client: "Resort operator",
-        status: "Completed",
-        timeline: "Opened March 2026",
-        scope: "14 animatronic figures along a shaded walking trail, plus a fossil dig pit",
-        summary:
-          "A walk-through attraction added to an existing resort to bring in school groups on weekdays.",
-      },
-      {
-        name: "Indoor game zone",
-        location: "Coimbatore",
-        client: "Retail mall",
-        status: "In design",
-        timeline: "Layout approval in progress",
-        scope: "9,000 sq ft · arcade, VR bays and a toddler soft play area",
-        summary: "A family entertainment centre on an upper floor of a mall, planned to anchor its food court.",
-      },
-    ],
   },
   {
     slug: "lighting-festival-party",
@@ -98,26 +51,6 @@ export const opportunities: Opportunity[] = [
       "Festival and seasonal décor, including Diwali, Christmas and wedding ranges",
       "Lighting design for streets, gardens and building façades",
       "Installation, on-site support through the event, and takedown",
-    ],
-    projects: [
-      {
-        name: "Festival-season street illumination",
-        location: "Madurai",
-        client: "Private event organiser",
-        status: "Completed",
-        timeline: "April 2026",
-        scope: "LED arches and motif lighting along a 2 km route",
-        summary: "Supplied, installed and maintained for the full festival period, then taken down within three days.",
-      },
-      {
-        name: "Illuminated evening garden",
-        location: "Coimbatore",
-        client: "Leisure park",
-        status: "Installing",
-        timeline: "Opening for the 2026 holiday season",
-        scope: "Light sculptures, a walk-through tunnel and pathway lighting",
-        summary: "Turns an existing daytime park into an evening attraction with a separate ticket.",
-      },
     ],
   },
   {
@@ -139,26 +72,6 @@ export const opportunities: Opportunity[] = [
       "Event and marquee tents for hire businesses and venues",
       "Site layout, installation and safety surfacing",
     ],
-    projects: [
-      {
-        name: "Glamping site",
-        location: "The Nilgiris",
-        client: "Resort owner",
-        status: "Completed",
-        timeline: "Phase 1 opened 2026",
-        scope: "12 safari tents on raised decks, with a common dining tent",
-        summary: "A tented stay on a hillside estate. A second phase of eight tents is in planning.",
-      },
-      {
-        name: "School playground and open-air gym",
-        location: "Tiruchirappalli",
-        client: "School group",
-        status: "Completed",
-        timeline: "Handed over June 2026",
-        scope: "Two play areas with safety surfacing, and 10 outdoor fitness stations",
-        summary: "Installed during the summer break across two campuses.",
-      },
-    ],
   },
   {
     slug: "food-beverage",
@@ -179,26 +92,6 @@ export const opportunities: Opportunity[] = [
       "Commercial kitchen and beverage equipment",
       "Installation, commissioning and staff orientation",
     ],
-    projects: [
-      {
-        name: "Water park food court",
-        location: "Madurai district",
-        client: "Private developer",
-        status: "In design",
-        timeline: "Opening with the park in 2027",
-        scope: "8 counters around a shared central kitchen, seating for 250",
-        summary: "Planned alongside the family water park E7 is building on the same site.",
-      },
-      {
-        name: "Container café",
-        location: "East Coast Road, near Mahabalipuram",
-        client: "Independent café owner",
-        status: "Completed",
-        timeline: "Opened 2026",
-        scope: "Two 20 ft containers with a kitchen, service counter and deck seating",
-        summary: "Built off-site and installed in under two weeks.",
-      },
-    ],
   },
   {
     slug: "movies-ott-cinema",
@@ -218,26 +111,6 @@ export const opportunities: Opportunity[] = [
       "LED walls, stage and sound equipment for concerts and events",
       "Film distribution, licensing, dubbing and subtitling across markets",
       "Cultural exchange events and student programmes between India and China",
-    ],
-    projects: [
-      {
-        name: "Single-screen cinema upgrade",
-        location: "Pollachi",
-        client: "Independent cinema owner",
-        status: "Completed",
-        timeline: "Reopened January 2026",
-        scope: "Recliner seating, laser projection and a new sound system for 180 seats",
-        summary: "Upgraded in stages so the cinema only closed for three weeks.",
-      },
-      {
-        name: "India–China student cultural exchange",
-        location: "Coimbatore and Shaoxing",
-        client: "College partners",
-        status: "In design",
-        timeline: "First exchange planned for 2027",
-        scope: "Music and dance performances, workshops and campus visits in both countries",
-        summary: "Developed with our representative office in Shaoxing.",
-      },
     ],
   },
 ];
