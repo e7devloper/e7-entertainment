@@ -60,14 +60,14 @@ export default async function ProductDetailPage({
         <div className="relative mx-auto w-full max-w-7xl px-6 py-16 lg:px-10">
           <div className="mb-4 inline-flex items-center gap-2 rounded bg-ink px-3 py-1.5 text-sm">
             <Link
-              href={`/products/${category.slug}`}
+              href={`/opportunities/${category.slug}`}
               className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold transition-colors hover:text-white"
             >
               {category.title}
             </Link>
             <span className="text-white/60">→</span>
             <Link
-              href={`/products/${category.slug}/${subcategory.slug}`}
+              href={`/opportunities/${category.slug}#${subcategory.slug}`}
               className="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold transition-colors hover:text-white"
             >
               {subcategory.name}
@@ -113,7 +113,7 @@ export default async function ProductDetailPage({
               Request Information
             </Link>
             <Link
-              href={`/products/${category.slug}/${subcategory.slug}`}
+              href={`/opportunities/${category.slug}#${subcategory.slug}`}
               className="btn btn-outline"
             >
               Back to {subcategory.name}

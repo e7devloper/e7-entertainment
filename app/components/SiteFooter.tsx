@@ -5,7 +5,7 @@ import { SocialLinks } from "./SocialLinks";
 const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/products", label: "Products" },
+  { href: "/#opportunities", label: "Services" },
   { href: "/park-request", label: "Request a Park" },
   { href: "/request-status", label: "Check Your Status" },
   { href: "/news", label: "News" },

@@ -3,12 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ProductsDropdown } from "./ProductsDropdown";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/products", label: "Products" },
   { href: "/#opportunities", label: "Services" },
   { href: "/news", label: "News" },
   { href: "/careers", label: "Careers" },
@@ -38,7 +36,7 @@ export function SiteHeader() {
 
         {/* Navigation - spreads across full width */}
         <nav className="ml-8 flex flex-1 items-center">
-          <ul className="hidden items-center 2xl:flex flex-1">
+          <ul className="hidden items-center min-[1360px]:flex flex-1">
             <li className="shrink-0">
               <Link
                 href="/"
@@ -54,9 +52,6 @@ export function SiteHeader() {
               >
                 About Us
               </Link>
-            </li>
-            <li className="shrink-0 px-3 min-[1700px]:px-5">
-              <ProductsDropdown />
             </li>
             <li className="shrink-0">
               <Link
@@ -94,7 +89,7 @@ export function SiteHeader() {
         </nav>
 
         {/* CTA buttons - flush right, desktop only */}
-        <div className="ml-auto hidden shrink-0 items-center gap-3 2xl:flex">
+        <div className="ml-auto hidden shrink-0 items-center gap-3 min-[1360px]:flex">
           <Link
             href="/contact#partner"
             className="btn btn-outline !px-5 !py-3 whitespace-nowrap text-xs max-[1759px]:!hidden"
@@ -122,7 +117,7 @@ export function SiteHeader() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-nav"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="ml-auto flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 2xl:hidden"
+          className="ml-auto flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 min-[1360px]:hidden"
         >
           <span
             className={`block h-0.5 w-6 bg-ink transition-transform ${
@@ -140,7 +135,7 @@ export function SiteHeader() {
       {/* Mobile menu panel */}
       <div
         id="mobile-nav"
-        className={`2xl:hidden ${
+        className={`min-[1360px]:hidden ${
           isMenuOpen ? "block" : "hidden"
         } max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-line bg-white`}
       >

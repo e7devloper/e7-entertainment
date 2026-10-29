@@ -8,6 +8,7 @@ import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
 import { AnnouncementTicker } from "./components/AnnouncementTicker";
 import { VisionMission } from "./components/VisionMission";
+import { opportunities, type Opportunity } from "./opportunities/data";
 
 const container: Variants = {
   hidden: {},
@@ -31,43 +32,34 @@ const announcements = [
   "Download the EoI and Corrigendum on our Careers page →",
 ];
 
-const opportunities = [
-  {
-    title: "Amusement & Dinosaur Parks, Game Zones",
-    description:
-      "Theme parks, water parks, dino and adventure attractions, arcades and VR zones — turnkey concepts built for the next generation of visitors.",
-    image: "/images/water-park.jpg",
-    alt: "Aerial view of a water park's pools and slides at golden hour",
-  },
-  {
-    title: "Lighting, Festival, Party & Seasonal Products",
-    description:
-      "Decorative, stage and festival lighting plus seasonal and celebration products — moving at scale across fast-growing markets.",
-    image: "/images/festival-crowd.jpg",
-    alt: "A crowd with hands raised before a lit festival stage at night",
-  },
-  {
-    title: "Sports, Tents & Outdoor",
-    description:
-      "Playground, fitness, camping and glamping gear, and event tents — built for active, outdoor experiences.",
-    image: "/images/camping-tents.jpg",
-    alt: "Tents pitched across a misty outdoor camping field at dawn",
-  },
-  {
-    title: "Food & Beverage Setups",
-    description:
-      "Food courts, kiosks, food trucks and commercial kitchen equipment for parks, malls and cafés. From layout to daily operations, we deliver ready-to-run setups built for high footfall.",
-    image: "/images/container-cafe.jpg",
-    alt: "A dockside café and kiosk setup on a waterfront boardwalk",
-  },
-  {
-    title: "Movies, Content & OTT, Cinema, Events & Media, Cultural Exchange",
-    description:
-      "Cinema and live events, film and content distribution, and cultural exchange programs that turn moments into memories and bridge markets. Connecting screens and stages worldwide.",
-    image: "/images/cultural-dance.jpg",
-    alt: "A traditional dragon dance performance moving through a city street",
-  },
-];
+
+function OpportunityCard({ opportunity }: { opportunity: Opportunity }) {
+  return (
+    <Link href={`/opportunities/${opportunity.slug}`} className="flex h-full flex-col">
+      <div className="relative h-52 w-full overflow-hidden">
+        <Image
+          src={opportunity.image}
+          alt={opportunity.alt}
+          fill
+          sizes="(min-width: 1024px) 33vw, 100vw"
+          className="object-cover grayscale transition-[filter,transform] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+        />
+        <div className="absolute inset-0 bg-ink/10 transition-opacity duration-700 group-hover:opacity-0" />
+      </div>
+      <div className="flex flex-1 flex-col p-8">
+        <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
+          {opportunity.title}
+        </h3>
+        <p className="mt-4 text-sm leading-relaxed text-muted">
+          {opportunity.description}
+        </p>
+        <p className="mt-auto pt-6 font-display text-xs font-semibold uppercase tracking-[0.14em] text-ink group-hover:text-gold-ink">
+          Explore <span aria-hidden>→</span>
+        </p>
+      </div>
+    </Link>
+  );
+}
 
 export default function Home() {
   return (
@@ -208,26 +200,7 @@ export default function Home() {
                   index === 2 ? "sm:col-span-2 lg:col-span-1" : ""
                 }`}
               >
-                {opportunity.image && (
-                  <div className="relative h-52 w-full overflow-hidden">
-                    <Image
-                      src={opportunity.image}
-                      alt={opportunity.alt}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, 100vw"
-                      className="object-cover grayscale transition-[filter,transform] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
-                    />
-                    <div className="absolute inset-0 bg-ink/10 transition-opacity duration-700 group-hover:opacity-0" />
-                  </div>
-                )}
-                <div className="p-8">
-                  <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
-                    {opportunity.title}
-                  </h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted">
-                    {opportunity.description}
-                  </p>
-                </div>
+                <OpportunityCard opportunity={opportunity} />
               </StaggerItem>
             ))}
           </StaggerGroup>
@@ -237,26 +210,7 @@ export default function Home() {
                 key={opportunity.title}
                 className="group h-full bg-white transition-colors hover:bg-sand"
               >
-                {opportunity.image && (
-                  <div className="relative h-52 w-full overflow-hidden">
-                    <Image
-                      src={opportunity.image}
-                      alt={opportunity.alt}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, 100vw"
-                      className="object-cover grayscale transition-[filter,transform] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
-                    />
-                    <div className="absolute inset-0 bg-ink/10 transition-opacity duration-700 group-hover:opacity-0" />
-                  </div>
-                )}
-                <div className="p-8">
-                  <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
-                    {opportunity.title}
-                  </h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted">
-                    {opportunity.description}
-                  </p>
-                </div>
+                <OpportunityCard opportunity={opportunity} />
               </StaggerItem>
             ))}
           </StaggerGroup>
