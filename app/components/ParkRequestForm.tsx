@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState, type ReactNode } from "react";
+import Link from "next/link";
 import {
   CONTACT_METHODS,
   CURRENCIES,
@@ -296,6 +297,12 @@ export function ParkRequestForm() {
             {result.ticket.ref}
           </p>
         </div>
+        <Link
+          href={`/request-status?ref=${encodeURIComponent(result.ticket.ref)}`}
+          className="btn btn-outline mt-6"
+        >
+          Check your status
+        </Link>
         <p className="mt-6 text-sm text-muted">
           {result.emailSent
             ? `A copy of everything you submitted is on its way to ${email}.`

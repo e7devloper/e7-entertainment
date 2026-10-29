@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { ParkRequestForm } from "../components/ParkRequestForm";
@@ -21,6 +22,12 @@ export default function ParkRequest() {
           <p className="mt-6 text-base leading-relaxed text-ink-soft sm:text-lg">
             Tell us what you have in mind — park type, budget, location and timeline — and our
             team will follow up by the method you prefer.
+          </p>
+          <p className="mt-4 text-sm text-muted">
+            Already sent one?{" "}
+            <Link href="/request-status" className="font-semibold text-ink underline underline-offset-4 hover:text-gold-ink">
+              Check your status
+            </Link>
           </p>
         </div>
       </section>

@@ -7,6 +7,7 @@ const quickLinks = [
   { href: "/about", label: "About Us" },
   { href: "/products", label: "Products" },
   { href: "/park-request", label: "Request a Park" },
+  { href: "/request-status", label: "Check Your Status" },
   { href: "/news", label: "News" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact Us" },

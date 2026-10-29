@@ -37,12 +37,12 @@ export function SiteHeader() {
         </Link>
 
         {/* Navigation - spreads across full width */}
-        <nav className="ml-12 flex flex-1 items-center">
-          <ul className="hidden items-center lg:flex flex-1">
+        <nav className="ml-8 flex flex-1 items-center">
+          <ul className="hidden items-center 2xl:flex flex-1">
             <li className="shrink-0">
               <Link
                 href="/"
-                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-3 min-[1700px]:px-5"
               >
                 Home
               </Link>
@@ -50,18 +50,18 @@ export function SiteHeader() {
             <li className="shrink-0">
               <Link
                 href="/about"
-                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-3 min-[1700px]:px-5"
               >
                 About Us
               </Link>
             </li>
-            <li className="shrink-0 px-6">
+            <li className="shrink-0 px-3 min-[1700px]:px-5">
               <ProductsDropdown />
             </li>
             <li className="shrink-0">
               <Link
                 href="/#opportunities"
-                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-3 min-[1700px]:px-5"
               >
                 Services
               </Link>
@@ -69,7 +69,7 @@ export function SiteHeader() {
             <li className="shrink-0">
               <Link
                 href="/news"
-                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-3 min-[1700px]:px-5"
               >
                 News
               </Link>
@@ -77,7 +77,7 @@ export function SiteHeader() {
             <li className="shrink-0">
               <Link
                 href="/careers"
-                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-3 min-[1700px]:px-5"
               >
                 Careers
               </Link>
@@ -85,7 +85,7 @@ export function SiteHeader() {
             <li className="shrink-0">
               <Link
                 href="/contact"
-                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-3 min-[1700px]:px-5"
               >
                 Contact Us
               </Link>
@@ -94,12 +94,18 @@ export function SiteHeader() {
         </nav>
 
         {/* CTA buttons - flush right, desktop only */}
-        <div className="ml-auto hidden shrink-0 items-center gap-3 lg:flex">
+        <div className="ml-auto hidden shrink-0 items-center gap-3 2xl:flex">
           <Link
             href="/contact#partner"
-            className="btn btn-outline hidden !px-5 !py-3 whitespace-nowrap text-xs xl:inline-flex"
+            className="btn btn-outline !px-5 !py-3 whitespace-nowrap text-xs max-[1759px]:!hidden"
           >
             Become a Partner
+          </Link>
+          <Link
+            href="/request-status"
+            className="btn btn-outline !px-5 !py-3 whitespace-nowrap text-xs"
+          >
+            Check Your Status
           </Link>
           <Link
             href="/park-request"
@@ -116,7 +122,7 @@ export function SiteHeader() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-nav"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="ml-auto flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="ml-auto flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 2xl:hidden"
         >
           <span
             className={`block h-0.5 w-6 bg-ink transition-transform ${
@@ -134,7 +140,7 @@ export function SiteHeader() {
       {/* Mobile menu panel */}
       <div
         id="mobile-nav"
-        className={`lg:hidden ${
+        className={`2xl:hidden ${
           isMenuOpen ? "block" : "hidden"
         } max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-line bg-white`}
       >
@@ -160,6 +166,13 @@ export function SiteHeader() {
             className="btn btn-outline block w-full !px-5 !py-3 text-center text-xs"
           >
             Become a Partner
+          </Link>
+          <Link
+            href="/request-status"
+            onClick={() => setIsMenuOpen(false)}
+            className="btn btn-outline block w-full !px-5 !py-3 text-center text-xs"
+          >
+            Check Your Status
           </Link>
           <Link
             href="/park-request"
