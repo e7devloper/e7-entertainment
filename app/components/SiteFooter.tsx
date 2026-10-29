@@ -13,6 +13,11 @@ const quickLinks = [
   { href: "/contact", label: "Contact Us" },
 ];
 
+const legalLinks = [
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Use" },
+];
+
 const offices = [
   {
     label: "Head Office — Hong Kong",
@@ -99,11 +104,23 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-8">
+        <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs tracking-wide text-white/55">
             &copy; {new Date().getFullYear()} E7 Entertainments Group. All
             rights reserved.
           </p>
+          <ul className="flex gap-6">
+            {legalLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-xs tracking-wide text-white/70 transition-colors hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

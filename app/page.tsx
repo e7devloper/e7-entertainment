@@ -7,6 +7,7 @@ import { Reveal, StaggerGroup, StaggerItem } from "./components/Reveal";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
 import { AnnouncementTicker } from "./components/AnnouncementTicker";
+import { VisionMission } from "./components/VisionMission";
 
 const container: Variants = {
   hidden: {},
@@ -149,6 +150,8 @@ export default function Home() {
           </div>
         </Reveal>
       </section>
+
+      <VisionMission />
 
       {/* Founder's Message */}
       <section className="bg-sand py-28">

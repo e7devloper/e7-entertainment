@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Reveal, StaggerGroup, StaggerItem } from "../components/Reveal";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
+import { VisionMission } from "../components/VisionMission";
 
 export const metadata = {
   title: "About — E7 Entertainments Group",
@@ -93,6 +94,8 @@ export default function About() {
           </div>
         </Reveal>
       </section>
+
+      <VisionMission />
 
       {/* Services */}
       <section className="bg-sand py-28">

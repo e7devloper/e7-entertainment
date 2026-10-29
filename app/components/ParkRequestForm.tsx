@@ -480,7 +480,13 @@ export function ParkRequestForm() {
       <button type="submit" disabled={busy} className="btn btn-solid mt-8 disabled:opacity-60">
         {busy ? "Sending…" : "Send request"}
       </button>
-      <p className="mt-4 text-sm text-muted">We&apos;ll email a copy of this request to you.</p>
+      <p className="mt-4 text-sm text-muted">
+        We&apos;ll email a copy of this request to you. Our{" "}
+        <Link href="/privacy" className="font-semibold text-ink underline underline-offset-4 hover:text-gold-ink">
+          privacy policy
+        </Link>{" "}
+        explains how we use it.
+      </p>
     </form>
   );
 }
