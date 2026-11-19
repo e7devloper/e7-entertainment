@@ -6,7 +6,6 @@ import { motion, type Variants } from "framer-motion";
 import { Reveal, StaggerGroup, StaggerItem } from "./components/Reveal";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
-import { AnnouncementTicker } from "./components/AnnouncementTicker";
 import { VisionMission } from "./components/VisionMission";
 import { opportunities, type Opportunity } from "./opportunities/data";
 
@@ -23,15 +22,6 @@ const item: Variants = {
     transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
   },
 };
-
-const announcements = [
-  "Now inviting Expression of Interest — Empanelment of Architects",
-  "Master Planning, 3D Walkthroughs & DPRs for amusement, water & dinosaur parks and leisure destinations",
-  "Free to apply · Last date 22.10.2026, 5:00 PM IST (Corrigendum No. 01)",
-  "Online pre-submission meeting 19.10.2026, 12:00 PM IST",
-  "Download the EoI and Corrigendum on our Careers page →",
-];
-
 
 function OpportunityCard({ opportunity }: { opportunity: Opportunity }) {
   return (
@@ -80,13 +70,6 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/40 to-ink/10" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" />
         </div>
-
-        <AnnouncementTicker
-          label="Announcement"
-          messages={announcements}
-          href="/careers"
-          className="absolute inset-x-0 top-[81px] z-10"
-        />
 
         <motion.div
           variants={container}

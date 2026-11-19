@@ -142,32 +142,6 @@ body {
   margin-right: auto;
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.ticker-track {
-  animation: marquee 40s linear infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ticker-track {
-    animation: none;
-  }
-
-  /* Without the scroll animation, a static viewport would clip every
-     message past the first — let reduced-motion users scroll it manually. */
-  .ticker-viewport {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
 /* Long-form copy on the privacy policy and terms pages */
 .legal-prose h2 {
   margin-top: 3rem;
